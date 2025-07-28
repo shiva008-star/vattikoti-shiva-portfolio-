@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name | Undergraduate Portfolio</title>
+    <title>Shiva Vattikoti | Computer Science Student</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -343,6 +343,27 @@
             padding: 2rem;
         }
 
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+        }
+
+        .skill-pill {
+            background: white;
+            padding: 0.8rem 1.2rem;
+            border-radius: 50px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .skill-pill:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-3px);
+        }
+
         @media (max-width: 768px) {
             .about-content {
                 grid-template-columns: 1fr;
@@ -361,12 +382,12 @@
 <body>
     <nav>
         <div class="nav-container">
-            <div class="logo">YourName</div>
+            <div class="logo">Shiva Vattikoti</div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
                 <li><a href="#education">Education</a></li>
+                <li><a href="#activities">Activities</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -374,11 +395,11 @@
 
     <header>
         <div class="hero-content">
-            <h1>Hi, I'm <span style="color: var(--accent-color);">Your Name</span></h1>
+            <h1>Hi, I'm <span style="color: var(--accent-color);">Shiva Vattikoti</span></h1>
             <div class="typewriter" id="typewriter"></div>
             <div>
-                <a href="#projects" class="btn">View My Work</a>
-                <a href="#" class="btn">Download Resume</a>
+                <a href="#skills" class="btn">View My Skills</a>
+                <a href="#contact" class="btn">Contact Me</a>
             </div>
         </div>
     </header>
@@ -389,12 +410,12 @@
         </div>
         <div class="about-content">
             <div>
-                <img src="https://via.placeholder.com/400x500" alt="Profile Image" class="profile-img">
+                <img src="https://via.placeholder.com/400x500" alt="Shiva Vattikoti" class="profile-img">
             </div>
             <div>
-                <h3>Undergraduate Student in [Your Major]</h3>
-                <p>I'm currently pursuing my Bachelor's degree at [Your University] with a passion for [your interests]. I love solving problems and creating innovative solutions through technology.</p>
-                <p>When I'm not studying or coding, you can find me [your hobbies/interests]. I'm always eager to learn new things and take on challenges that push me out of my comfort zone.</p>
+                <h3>Computer Science Engineering Student</h3>
+                <p>A highly motivated and detail-oriented undergraduate with a strong foundation in Computer Science. Eager to apply academic knowledge and learn through real-world challenges in a dynamic work environment.</p>
+                <p>Currently pursuing my B.Tech at SCIENT Institute of Technology with a CGPA of 7.3/10. Passionate about problem-solving and developing technical solutions.</p>
                 <div style="margin-top: 2rem;">
                     <a href="#contact" class="btn">Get In Touch</a>
                 </div>
@@ -408,119 +429,26 @@
         </div>
         <div class="skills-container">
             <div class="skill-item">
-                <h3>Programming</h3>
-                <div class="skill">
-                    <p>Python</p>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 85%"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <p>Java</p>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 75%"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <p>JavaScript</p>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 70%"></div>
-                    </div>
+                <h3>Technical Skills</h3>
+                <div class="skills-grid">
+                    <div class="skill-pill">C</div>
+                    <div class="skill-pill">Java</div>
+                    <div class="skill-pill">Python</div>
+                    <div class="skill-pill">HTML</div>
+                    <div class="skill-pill">CSS</div>
+                    <div class="skill-pill">Git</div>
+                    <div class="skill-pill">MySQL</div>
                 </div>
             </div>
             <div class="skill-item">
-                <h3>Web Development</h3>
-                <div class="skill">
-                    <p>HTML/CSS</p>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 90%"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <p>React</p>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 65%"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <p>Node.js</p>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 60%"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="skill-item">
-                <h3>Other Skills</h3>
-                <div class="skill">
-                    <p>Data Structures</p>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 80%"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <p>Git/GitHub</p>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 75%"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <p>UI/UX Design</p>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 60%"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects">
-        <div class="section-title">
-            <h2>My Projects</h2>
-        </div>
-        <div class="projects-grid">
-            <div class="project-card">
-                <img src="https://via.placeholder.com/600x400" alt="Project 1" class="project-img">
-                <div class="project-info">
-                    <h3>Weather Dashboard</h3>
-                    <p>A responsive web application that displays current weather and forecasts using API integration.</p>
-                    <div class="project-tags">
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">API</span>
-                        <span class="tag">CSS</span>
-                    </div>
-                    <div style="margin-top: 1rem;">
-                        <a href="#" class="btn" style="padding: 0.5rem 1rem; font-size: 0.9rem;">View Project</a>
-                    </div>
-                </div>
-            </div>
-            <div class="project-card">
-                <img src="https://via.placeholder.com/600x400" alt="Project 2" class="project-img">
-                <div class="project-info">
-                    <h3>Student Management System</h3>
-                    <p>A Java application for managing student records with CRUD functionality.</p>
-                    <div class="project-tags">
-                        <span class="tag">Java</span>
-                        <span class="tag">Swing</span>
-                        <span class="tag">MySQL</span>
-                    </div>
-                    <div style="margin-top: 1rem;">
-                        <a href="#" class="btn" style="padding: 0.5rem 1rem; font-size: 0.9rem;">View Project</a>
-                    </div>
-                </div>
-            </div>
-            <div class="project-card">
-                <img src="https://via.placeholder.com/600x400" alt="Project 3" class="project-img">
-                <div class="project-info">
-                    <h3>E-commerce Website</h3>
-                    <p>A React-based online store with product filtering and cart functionality.</p>
-                    <div class="project-tags">
-                        <span class="tag">React</span>
-                        <span class="tag">Node.js</span>
-                        <span class="tag">MongoDB</span>
-                    </div>
-                    <div style="margin-top: 1rem;">
-                        <a href="#" class="btn" style="padding: 0.5rem 1rem; font-size: 0.9rem;">View Project</a>
-                    </div>
+                <h3>Soft Skills</h3>
+                <div class="skills-grid">
+                    <div class="skill-pill">Problem Solving</div>
+                    <div class="skill-pill">Flexibility</div>
+                    <div class="skill-pill">Communication</div>
+                    <div class="skill-pill">Organization</div>
+                    <div class="skill-pill">Critical Thinking</div>
+                    <div class="skill-pill">Collaboration</div>
                 </div>
             </div>
         </div>
@@ -531,17 +459,24 @@
             <h2>Education</h2>
         </div>
         <div class="education-item">
-            <h3>Bachelor of Science in Computer Science</h3>
-            <p class="education-date">Expected Graduation: May 2025</p>
-            <p><strong>University Name</strong> - City, State</p>
-            <p>GPA: 3.7/4.0</p>
-            <p style="margin-top: 1rem;"><strong>Relevant Coursework:</strong> Data Structures, Algorithms, Web Development, Database Systems, Machine Learning</p>
+            <h3>Bachelor of Technology (B.Tech) in Computer Science Engineering</h3>
+            <p class="education-date">August 2022 – Present</p>
+            <p><strong>SCIENT Institute of Technology</strong> - Hyderabad, India</p>
+            <p>CGPA: 7.3/10</p>
+        </div>
+    </section>
+
+    <section id="activities">
+        <div class="section-title">
+            <h2>Activities</h2>
         </div>
         <div class="education-item">
-            <h3>High School Diploma</h3>
-            <p class="education-date">Graduated: June 2021</p>
-            <p><strong>High School Name</strong> - City, State</p>
-            <p>GPA: 4.0/4.0</p>
+            <h3>Technical Workshops & Hackathons</h3>
+            <p>Actively participated in technical workshops and college-level hackathons, gaining hands-on experience in real-world problem-solving.</p>
+        </div>
+        <div class="education-item">
+            <h3>Student Clubs & Events</h3>
+            <p>Contributed to student clubs and event organization, enhancing teamwork and leadership skills.</p>
         </div>
     </section>
 
@@ -553,16 +488,13 @@
             <div class="contact-info">
                 <h3>Contact Information</h3>
                 <div class="contact-details">
-                    <p><i class="fas fa-envelope"></i> your.email@university.edu</p>
-                    <p><i class="fas fa-phone"></i> (123) 456-7890</p>
-                    <p><i class="fas fa-map-marker-alt"></i> City, State</p>
+                    <p><i class="fas fa-envelope"></i> Shivavattikot/4@gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Champapet, Hyderabad, Telangana - 500079</p>
                 </div>
                 <h3>Connect With Me</h3>
                 <div class="social-links">
                     <a href="#"><i class="fab fa-linkedin-in"></i></a>
                     <a href="#"><i class="fab fa-github"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
             <div class="contact-info">
@@ -584,7 +516,7 @@
     </section>
 
     <footer>
-        <p>&copy; 2023 Your Name. All rights reserved.</p>
+        <p>&copy; 2023 Shiva Vattikoti. All rights reserved.</p>
     </footer>
 
     <script>
@@ -592,9 +524,9 @@
         const typewriterElement = document.getElementById('typewriter');
         const texts = [
             "a Computer Science Student",
-            "a Web Developer",
             "a Problem Solver",
-            "an Aspiring Software Engineer"
+            "a Tech Enthusiast",
+            "an Aspiring Engineer"
         ];
         let textIndex = 0;
         let charIndex = 0;
@@ -616,11 +548,11 @@
 
             if (!isDeleting && charIndex === currentText.length) {
                 isDeleting = true;
-                typingSpeed = 1500; // Pause at end of text
+                typingSpeed = 1500;
             } else if (isDeleting && charIndex === 0) {
                 isDeleting = false;
                 textIndex = (textIndex + 1) % texts.length;
-                typingSpeed = 500; // Pause before typing next text
+                typingSpeed = 500;
             }
 
             setTimeout(typeWriter, typingSpeed);
