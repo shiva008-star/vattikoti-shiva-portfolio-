@@ -1,85 +1,79 @@
 import React from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Github, Linkedin } from "lucide-react";
 import { motion } from "framer-motion";
+import { Github, Linkedin } from "lucide-react";
 
 export default function Portfolio() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-gray-900 to-black text-white p-6">
+    <div className="min-h-screen bg-[#0f0f0f] text-white font-sans">
       {/* Hero Section */}
-      <section className="text-center py-16">
+      <section className="flex flex-col items-center justify-center h-screen text-center px-4">
         <motion.h1
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1 }}
-          className="text-4xl md:text-6xl font-bold mb-4"
+          className="text-5xl font-bold tracking-tight"
         >
-          Shiva Vattikoti
+          Hi, I'm <span className="text-indigo-500">Shiva Vattikoti</span>
         </motion.h1>
-        <p className="text-lg text-gray-300">
-          Aspiring Software Engineer | Passionate Learner
+        <p className="mt-4 text-lg text-gray-400">
+          Computer Science Undergraduate | Problem Solver | Quick Learner
         </p>
-      </section>
-
-      {/* About Section */}
-      <section className="max-w-3xl mx-auto py-8">
-        <Card className="bg-gray-800 text-white">
-          <CardContent className="p-6">
-            <h2 className="text-2xl font-semibold mb-4">About Me</h2>
-            <p>
-              A highly motivated and detail-oriented undergraduate with a strong
-              foundation in Computer Science. Eager to apply academic knowledge and
-              learn through real-world challenges in a dynamic work environment.
-            </p>
-          </CardContent>
-        </Card>
-      </section>
-
-      {/* Skills Section */}
-      <section className="max-w-4xl mx-auto py-8">
-        <h2 className="text-2xl font-semibold mb-4">Skills</h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-center">
-          {[
-            "C", "Java", "Python", "HTML", "CSS", "Git", "MySQL",
-            "Problem Solving", "Critical Thinking", "Communication"
-          ].map((skill) => (
-            <div
-              key={skill}
-              className="bg-gray-800 rounded-xl p-4 shadow hover:scale-105 transition"
-            >
-              {skill}
-            </div>
-          ))}
+        <div className="flex gap-4 mt-6">
+          <a href="#contact" className="bg-indigo-500 px-6 py-2 rounded-full font-semibold hover:bg-indigo-600">
+            Contact Me
+          </a>
+          <a href="/shiva-orginal.pdf" download className="border border-indigo-500 px-6 py-2 rounded-full font-semibold hover:bg-indigo-500 hover:text-white">
+            Download Resume
+          </a>
         </div>
       </section>
 
-      {/* Resume Section */}
-      <section className="text-center py-8">
-        <h2 className="text-2xl font-semibold mb-4">Resume</h2>
-        <a
-          href="/shiva-orginal.pdf"
-          download
-          className="inline-block bg-white text-black px-6 py-2 rounded-full font-semibold shadow hover:bg-gray-200"
-        >
-          Download Resume
-        </a>
+      {/* About Section */}
+      <section className="px-6 py-12 bg-[#1a1a1a]">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold mb-4">About Me</h2>
+          <p className="text-gray-300">
+            I'm a highly motivated and detail-oriented undergraduate with a strong foundation in Computer Science.
+            Eager to apply academic knowledge and learn through real-world challenges in a dynamic environment.
+          </p>
+        </div>
+      </section>
+
+      {/* Skills Section */}
+      <section className="px-6 py-12">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-3xl font-bold mb-6 text-center">Skills</h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 text-center">
+            {["C", "Java", "Python", "HTML", "CSS", "Git", "MySQL", "Problem Solving", "Communication", "Critical Thinking"].map((skill) => (
+              <div key={skill} className="bg-[#1f1f1f] py-4 px-6 rounded-xl shadow hover:shadow-lg hover:scale-105 transition">
+                {skill}
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* Contact Section */}
-      <section className="text-center py-8">
-        <h2 className="text-2xl font-semibold mb-4">Contact</h2>
-        <p className="mb-2">Email: <a href="mailto:Shivavattikoti4@gmail.com" className="underline">Shivavattikoti4@gmail.com</a></p>
-        <div className="flex justify-center gap-4 mt-4">
-          <a href="#" target="_blank" rel="noopener noreferrer">
+      <section id="contact" className="px-6 py-12 bg-[#1a1a1a] text-center">
+        <h2 className="text-3xl font-bold mb-4">Contact</h2>
+        <p className="text-gray-300">Feel free to reach out to me anytime!</p>
+        <p className="mt-2 text-indigo-400">
+          <a href="mailto:Shivavattikoti4@gmail.com">Shivavattikoti4@gmail.com</a>
+        </p>
+        <div className="flex justify-center gap-6 mt-4">
+          <a href="#" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-500">
             <Linkedin className="w-6 h-6" />
           </a>
-          <a href="#" target="_blank" rel="noopener noreferrer">
+          <a href="#" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-500">
             <Github className="w-6 h-6" />
           </a>
         </div>
       </section>
-    </main>
+
+      {/* Footer */}
+      <footer className="text-center text-gray-600 text-sm py-6">
+        &copy; {new Date().getFullYear()} Shiva Vattikoti. All rights reserved.
+      </footer>
+    </div>
   );
 }
-
